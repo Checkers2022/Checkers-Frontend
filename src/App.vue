@@ -1,0 +1,43 @@
+<template>
+  <div id="app">
+    <div id="main" class="flex flex-row min-h-screen min-w-screen">
+      <SideBar class="sidebar h-screen" />
+      <div class="middle w-screen min-w-fit h-screen">
+        <router-view />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import SideBar from "./components/sideBarComponents/SideBar.vue";
+export default {
+  name: "App",
+  components: {
+    SideBar,
+  },
+};
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style>
