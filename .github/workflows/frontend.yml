@@ -2,8 +2,6 @@ name: frontend
 
 on:
   push:
-    paths:
-      - '/**'
   pull_request:
   workflow_dispatch:
 
