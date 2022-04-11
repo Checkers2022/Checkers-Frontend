@@ -6,3 +6,8 @@ updates:
       interval: "daily"
     #TODO temporary
     target-branch: "devopsGHA"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    target-branch: "devopsGHA"

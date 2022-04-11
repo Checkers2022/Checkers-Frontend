@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Error404 from "../views/ErrorView.vue";
-import HomeView from "../views/Home.vue";
-import LeaderBoard from "../views/LeaderBoard";
-import LogIn from "../views/LogIn";
-import Profile from "../views/Profile";
-import SignUp from "../views/SignUp";
-import Lobbies from "../views/Lobbies";
+import Error404 from "../../../src/views/ErrorView.vue";
+import HomeView from "../../../src/views/Home.vue";
+import LeaderBoard from "../../../src/views/LeaderBoard.vue";
+import Lobbies from "../../../src/views/Lobbies.vue";
+import LogIn from "../../../src/views/LogIn.vue";
+import Profile from "../../../src/views/Profile.vue";
+import SignUp from "../../../src/views/SignUp.vue";
 
 const routes = [
   {

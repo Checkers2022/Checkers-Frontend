@@ -1,10 +1,23 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <div id="main" class="flex flex-row min-h-screen min-w-screen">
+      <SideBar class="sidebar h-screen" />
+      <div class="middle w-screen min-w-fit h-screen">
+        <router-view />
+      </div>
+    </div>
+  </div>
 </template>
+
+<script>
+import SideBar from "./components/sideBarComponents/SideBar.vue";
+export default {
+  name: "App",
+  components: {
+    SideBar,
+  },
+};
+</script>
 
 <style>
 #app {
