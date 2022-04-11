@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "preinstall": "npx force-resolutions",
-    "postinstall": "cd frontend && npm i && npm run build",
+    "postinstall": "npm i && npm run build",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "gulp": "gulp",
