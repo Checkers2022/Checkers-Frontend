@@ -3,6 +3,7 @@ RUN mkdir -p /app
 WORKDIR /app
 COPY . /app
 RUN npm install --unsafe-perm
+RUN npm run build
 
 # production stage
 FROM nginx:stable-alpine as production-stage
