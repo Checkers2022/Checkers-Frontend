@@ -3,7 +3,7 @@
 <template>
   <div class="centralSpace flex flex-row justify-center px-20 py-10">
     <CheckerBoard class="board flex flex-col" />
-    <p>Hello World!!!!!!!</p>
+    <Chat class="chat mt-28" />
 
     <div class="modal modal-change-location">
       <div class="flex flex-col items-center modal-box">
@@ -20,11 +20,13 @@
 
 <script>
 import CheckerBoard from "../components/boardComponents/CheckerBoard.vue";
+import Chat from "../components/boardComponents/Chat.vue";
 
 export default {
   name: "GameView",
   components: {
     CheckerBoard,
+    Chat,
   },
 };
 </script>
