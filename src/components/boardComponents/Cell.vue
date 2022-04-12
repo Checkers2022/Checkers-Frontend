@@ -1,14 +1,6 @@
 <!-- This file represent the Cell component -->
 <template>
-  <div
-    :id="cell"
-    :class="getClasses"
-    class="cell"
-    :style="{ flex: size }"
-    @click="selectCell"
-    @mouseover="hoverCell"
-    @mouseleave="leaveCell"
-  >
+  <div :id="cell" :class="getClasses" class="cell" :style="{ flex: size }">
     <template v-if="cell !== 0">
       <div v-if="cell <= 20">
         <img
@@ -37,7 +29,7 @@ export default {
   name: "CellComponent",
   props: {
     cell: { type: Number, default: 0 },
-    size: { type: Number, default: 0 },
+    size: { type: String, default: "" },
     x: { type: Number, default: 0 },
     y: { type: Number, default: 0 },
   },

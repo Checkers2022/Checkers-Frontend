@@ -5,16 +5,22 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import ErrorView from '../src/views/ErrorView.vue'
+import router from './utils/router/router.js'
+
+const wrapper = mount(ErrorView, {
+    global: {
+        plugins: [router]
+    }
+})
 
 describe('ErrorView mount test', ()=> {
     it('should mount', () => {
-        const wrapper = mount(ErrorView)
+        expect(wrapper.find('#notfound').exists()).toBeTruthy()
     })
 })
 
 describe('ErrorView contain test', ()=> {
     it('should coontain', () => {
-        const wrapper = mount(ErrorView)
 
         expect(wrapper.find('#notfound').exists()).toBeTruthy()
 
@@ -25,7 +31,5 @@ describe('ErrorView contain test', ()=> {
         expect(div404.find('h1').exists()).toBeTruthy()
 
         expect(wrapper.find('p').exists()).toBeTruthy()
-
-        expect(wrapper.find('router-link').exists()).toBeTruthy()
     })
 })

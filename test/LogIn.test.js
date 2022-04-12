@@ -5,12 +5,17 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import Login from '../src/views/LogIn.vue'
+import router from './utils/router/router.js'
 
-const wrapper = mount(Login)
+const wrapper = mount(Login, {
+    global: {
+        plugins: [router]
+    }
+})
  
 describe('Login Mount Test', ()=> {
     it('should mount', () => {
-        const wrapper = mount(Login)
+        expect(wrapper.find('.mail').exists()).toBeTruthy()
     })
 })
 

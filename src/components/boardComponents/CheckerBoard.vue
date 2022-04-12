@@ -2,7 +2,7 @@
 
 <template>
   <div class="content flex flex-col flex-grow max-w-screen-lg">
-    <appPlayer1 :player="player2" />
+    <appPlayer1 />
     <div class="wrapper">
       <div class="subwrapper">
         <div class="grid">
@@ -13,17 +13,13 @@
               :x="x"
               :y="y"
               :cell="cell"
-              :my-moves="myMoves"
-              :moves="moves"
               :size="getSize"
-              @hover-cell="checkMoves"
-              @release="release"
             />
           </template>
         </div>
       </div>
     </div>
-    <appPlayer0 :player="player1" class="self-start" />
+    <appPlayer0 class="self-start" />
   </div>
 </template>
 
