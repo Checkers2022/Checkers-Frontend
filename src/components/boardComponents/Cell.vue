@@ -9,13 +9,22 @@
     @mouseover="hoverCell"
     @mouseleave="leaveCell"
   >
-    <div v-if="cell !== 0">
-      <img
-        class="ease-in-out duration-300"
-        src="../../assets/logo.png"
-        alt="Red Piece Image"
-      />
-    </div>
+    <template v-if="cell !== 0">
+      <div v-if="cell <= 20">
+        <img
+          class="ease-in-out duration-300"
+          src="../../assets/pieces/Red_Piece.png"
+          alt="Red Piece Image"
+        />
+      </div>
+      <div v-else-if="cell >= 31">
+        <img
+          class="ease-in-out duration-300"
+          src="../../assets/pieces/White_Piece.png"
+          alt="White Piece Image"
+        />
+      </div>
+    </template>
   </div>
 </template>
 
