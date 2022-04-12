@@ -2,6 +2,7 @@
 
 <template>
   <div class="centralSpace flex flex-row justify-center px-20 py-10">
+    <CheckerBoard class="board flex flex-col" />
     <p>Hello World!!!!!!!</p>
 
     <div class="modal modal-change-location">
@@ -18,8 +19,13 @@
 </template>
 
 <script>
+import CheckerBoard from "../components/boardComponents/CheckerBoard.vue";
+
 export default {
   name: "GameView",
+  components: {
+    CheckerBoard,
+  },
 };
 </script>
 
