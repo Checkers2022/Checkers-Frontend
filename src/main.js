@@ -5,4 +5,10 @@ import store from "./store";
 import "./index.css";
 import "@fortawesome/fontawesome-free/js/all";
 
-createApp(App).use(store).use(router).mount("#app");
+export const app = createApp(App);
+app.config.productionTip = false;
+app.config.globalProperties.$BOARD_SIZE = 10;
+app.config.globalProperties.$COLOR_TOP = "color-top";
+app.config.globalProperties.$COLOR_BOTTOM = "color-bottom";
+
+app.use(store).use(router).mount("#app");
