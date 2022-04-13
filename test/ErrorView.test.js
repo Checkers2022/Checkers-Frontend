@@ -5,13 +5,8 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import ErrorView from '../src/views/ErrorView.vue'
-import router from './utils/router/router.js'
 
-const wrapper = mount(ErrorView, {
-    global: {
-        plugins: [router]
-    }
-})
+const wrapper = mount(ErrorView)
 
 describe('ErrorView mount test', ()=> {
     it('should mount', () => {

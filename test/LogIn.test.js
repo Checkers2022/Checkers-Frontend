@@ -5,13 +5,8 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import Login from '../src/views/LogIn.vue'
-import router from './utils/router/router.js'
 
-const wrapper = mount(Login, {
-    global: {
-        plugins: [router]
-    }
-})
+const wrapper = mount(Login)
  
 describe('Login Mount Test', ()=> {
     it('should mount', () => {
