@@ -7,7 +7,6 @@ import { mount } from '@vue/test-utils'
 import Profile from '../src/views/Profile.vue'
 import DataInfo from '../src/components/profileComponents/DataInfo.vue'
 import MatchInfo from '../src/components/profileComponents/MatchInfo.vue'
-import { exp } from 'prelude-ls'
 
 describe('Profile Mount Test', () => {
     it('should mount Profile', () => {
